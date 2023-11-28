@@ -1,0 +1,16 @@
+.img-home{
+    width: 100%;
+    filter: blur(3px);
+}
+.sitegit-text-home{
+    position: absolute;
+    margin-top: -600px;
+    font-size: 150px;
+   margin-left: 35%;
+   color: white;
+
+}
+.git-text{
+    color: blue;
+    margin-left: -25px;
+}
