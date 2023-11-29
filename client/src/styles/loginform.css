@@ -1,0 +1,44 @@
+/* loginform.css */
+
+.login-form-container {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  .login-form-container h2 {
+    color: #333;
+  }
+  
+  .login-form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-form-container label {
+    margin-bottom: 10px;
+  }
+  
+  .login-form-container input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .login-form-container button {
+    background-color: #4caf50; /* Зелений колір кнопки */
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .login-form-container button:hover {
+    background-color: #45a049; /* Змінений колір кнопки при наведенні */
+  }
+  

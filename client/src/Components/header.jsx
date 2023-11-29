@@ -1,4 +1,6 @@
-import "../styles/header.css"
+// header.jsx
+
+import "../styles/header.css";
 import 'reset-css';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -10,6 +12,7 @@ const Header = () => {
         <ul className="ul-block">
           <li><Link to="/">Home</Link></li>
           <li className="two-text"><Link to="/products">Products</Link></li>
+          <li className="tree-text"><Link to="/login">Cart</Link></li> 
         </ul>
       </header>
     </div>
