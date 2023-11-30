@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../styles/loginform.css';
 
-const LoginForm = () => {
+const LoginForm = ({ users }) => {
   const navigate = useNavigate();
-  const [loginData, setLoginData] = useState({ username: '', password: '' });
+  const [loginData, setLoginData] = useState({ username: '', password: '', confirmPassword: '' });
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -12,7 +14,15 @@ const LoginForm = () => {
   };
 
   const handleSubmit = () => {
-    navigate('/cart');
+    const foundUser = users.find(
+      (user) => user.username === loginData.username && user.password === loginData.password
+    );
+
+    if (foundUser) {
+      navigate('/cart');
+    } else {
+      setErrorMessage('Паролі не співпадають. ');
+    }
   };
 
   return (
@@ -27,7 +37,17 @@ const LoginForm = () => {
           Password:
           <input type="password" name="password" value={loginData.password} onChange={handleInputChange} />
         </label>
+        <label>
+          Confirm Password:
+          <input type="password" name="confirmPassword" value={loginData.confirmPassword} onChange={handleInputChange} />
+        </label>
         <button type="button" onClick={handleSubmit}>Login</button>
+        {errorMessage && (
+          <p className="error-message">
+            {errorMessage}
+            <Link to="/register">Зареєструватися</Link>
+          </p>
+        )}
       </form>
     </div>
   );
