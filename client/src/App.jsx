@@ -7,15 +7,9 @@ import Main from './Components/main';
 import LoginForm from './Components/loginform';
 import Cart from './Components/cart'; 
 import Register from './Components/register';
+import Products from './Components/products';
 
 
-const Products = () => {
-  return (
-    <div>
-      <h1>Products</h1>
-    </div>
-  );
-};
 
 const App = () => {
    const [users, setUsers] = useState([
@@ -33,10 +27,13 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/login" element={<LoginForm />} />
+          <Route path="/products" element={<Products users={users} />} />
+          <Route
+            path="/login"
+            element={<LoginForm users={users} />}
+          /> 
           <Route path="/cart" element={<Cart />} />
-          <Route path="/register" element={<Register />} /> 
+          <Route path="/register" element={<Register onRegister={handleRegister} users={users} />} />
           
         </Routes>
       </div>

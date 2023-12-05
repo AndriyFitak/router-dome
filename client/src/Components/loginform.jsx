@@ -21,7 +21,7 @@ const LoginForm = ({ users }) => {
     if (foundUser) {
       navigate('/cart');
     } else {
-      setErrorMessage('Паролі не співпадають. ');
+      setErrorMessage('Неправильний логін або пароль.');
     }
   };
 
@@ -37,11 +37,9 @@ const LoginForm = ({ users }) => {
           Password:
           <input type="password" name="password" value={loginData.password} onChange={handleInputChange} />
         </label>
-        <label>
-          Confirm Password:
-          <input type="password" name="confirmPassword" value={loginData.confirmPassword} onChange={handleInputChange} />
-        </label>
-        <button type="button" onClick={handleSubmit}>Login</button>
+        <button type="button" onClick={handleSubmit}>
+          Login
+        </button>
         {errorMessage && (
           <p className="error-message">
             {errorMessage}
