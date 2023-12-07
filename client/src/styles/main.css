@@ -1,16 +1,69 @@
-.img-home{
-    width: 100%;
-    filter: blur(3px);
-}
-.sitegit-text-home{
-    position: absolute;
-    margin-top: -600px;
-    font-size: 150px;
-   margin-left: 35%;
-   color: white;
+/* ProductForm.css */
 
-}
-.git-text{
-    color: blue;
-    margin-left: -25px;
-}
+.container {
+    width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  .container h1 {
+    color: #333;
+  }
+  
+  .container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .form-input input {
+    width: 250px;
+    height: 30px;
+    
+  }
+  .price{
+    margin-top: 20px ;
+  }
+  .button {
+    background-color: #0066cc;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #005299;
+  }
+  
+  .product-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .product-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-item p {
+    margin: 20px 0 0;
+    font-size: 14px;
+    color: #555;
+  }
+  

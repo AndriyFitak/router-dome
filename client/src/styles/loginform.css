@@ -30,7 +30,7 @@
   }
   
   .login-form-container button {
-    background-color: #4caf50; /* Зелений колір кнопки */
+    background-color: #0066cc; /* Зелений колір кнопки */
     color: #fff;
     padding: 10px;
     border: none;
@@ -39,6 +39,6 @@
   }
   
   .login-form-container button:hover {
-    background-color: #45a049; /* Змінений колір кнопки при наведенні */
+    background-color: #0066cc; /* Змінений колір кнопки при наведенні */
   }
   
